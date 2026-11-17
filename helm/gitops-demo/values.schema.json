@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["size", "image"],
+  "properties": {
+    "size": {
+      "type": "string",
+      "enum": ["small", "medium", "large"]
+    },
+    "image": {
+      "type": "object",
+      "required": ["repository", "tag"],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "enum": ["nginx"]
+        },
+        "tag": {
+          "type": "string"
+        }
+      }
+    },
+    "service": {
+      "type": "object",
+      "properties": {
+        "port": {
+          "type": "integer",
+          "minimum": 80,
+          "maximum": 8080
+        }
+      }
+    }
+  }
+}
