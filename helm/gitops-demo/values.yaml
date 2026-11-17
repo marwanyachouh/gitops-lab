@@ -1,4 +1,4 @@
-replicaCount: 5
+size: small
 
 image:
   repository: nginx
