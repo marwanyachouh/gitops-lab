@@ -1,9 +1,10 @@
+{{- $replicas := dict "small" 1 "medium" 2 "large" 3 }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gitops-demo
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ get $replicas .Values.size }}
   selector:
     matchLabels:
       app: gitops-demo
