@@ -1,4 +1,4 @@
-size: enormous
+size: medium
 
 image:
   repository: nginx
